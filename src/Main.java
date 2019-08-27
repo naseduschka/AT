@@ -10,10 +10,13 @@ public class Main {
         Container container = jFrame.getContentPane();
         container.setLayout(new FlowLayout());
         JButton jButton = new JButton("Press me!");
+        JTextField jTextField = new JTextField(15);
         jButton.addActionListener((actionEvent)-> { //лямбда выражение
-            JOptionPane.showMessageDialog(null, "The button was pressed");
+            String s = JOptionPane.showInputDialog("Enter any text:");
+            jTextField.setText(s);
         }
         );
+        container.add(jTextField);
         container.add(jButton);
 
 
