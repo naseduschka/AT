@@ -11,6 +11,7 @@ public class Main {
         container.setLayout(new FlowLayout());
         JButton jButton = new JButton("Press me!");
         JTextField jTextField = new JTextField(15);
+        JButton wrongButton = new JButton();
         jButton.addActionListener((actionEvent)-> { //лямбда выражение
             String s = JOptionPane.showInputDialog("Enter any text:");
             jTextField.setText(s);
