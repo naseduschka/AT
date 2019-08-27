@@ -9,8 +9,13 @@ public class Main {
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Container container = jFrame.getContentPane();
         container.setLayout(new FlowLayout());
-        JButton jButton = new JButton("Press me ^^");
+        JButton jButton = new JButton("Press me!");
+        jButton.addActionListener((actionEvent)-> { //лямбда выражение
+            JOptionPane.showMessageDialog(null, "The button was pressed");
+        }
+        );
         container.add(jButton);
+
 
         jFrame.setVisible(true);
     }
